@@ -43,7 +43,7 @@ def getBMI(n):
             print("BMI data not Valid", myBMI)
         elif myBMI<underWeight:
             dicts = {"Underweight":{
-                "BMI":myBMI,
+                "BMI":str(myBMI)+"kg/m2",
                 "Risk":"Malnutritioned"
             }}
             doc.append(dicts)
@@ -51,14 +51,14 @@ def getBMI(n):
         elif minNormalWeight<myBMI<maxNormalWeight:
             print("Normal Weight - Risk Low")
             dicts = {"Normal_Weight":{
-                "BMI":myBMI,
+                "BMI":str(myBMI)+"kg/m2",
                 "Risk":"Low Risk"
             }}
             doc.append(dicts)
         elif minOverWeight<myBMI<maxOverWeight:
             overWeightCount +=1
             dicts = {"Over_Weight":{
-                "BMI":myBMI,
+                "BMI":str(myBMI)+"kg/m2",
                 "Risk":"Enhanced Risk"
             }}
             doc.append(dicts)
@@ -66,7 +66,7 @@ def getBMI(n):
         elif minModObese<myBMI<maxModObese:
             overWeightCount +=1
             dicts = {"Moderately_Obese":{
-                "BMI":myBMI,
+                "BMI":str(myBMI)+"kg/m2",
                 "Risk":"Medium Risk"
             }}
             doc.append(dicts)
@@ -74,7 +74,7 @@ def getBMI(n):
         elif minSevereObese<myBMI<maxSevereObese:
             overWeightCount +=1
             dicts = {"Severe_Obese":{
-                "BMI":myBMI,
+                "BMI":str(myBMI)+"kg/m2",
                 "Risk":"High Risk"
             }}
             doc.append(dicts)
@@ -82,7 +82,7 @@ def getBMI(n):
         elif myBMI>verySevereObese:
             overWeightCount +=1
             dicts = {"Sever_Obese":{
-                "BMI":myBMI,
+                "BMI":str(myBMI)+"kg/m2",
                 "Risk":"Very_High_Risk"
             }}
             doc.append(dicts)
